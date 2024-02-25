@@ -21,8 +21,8 @@
 }
 
 .res-container {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .res-card {
@@ -46,6 +46,38 @@
   width: 100%;
 }
 
-.filter-btn{
+.filter-btn {
   margin: 5px;
+}
+
+.shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.shimmer-card {
+  width: calc(20% - 10px); 
+  height: 200px; 
+  background: linear-gradient(to right, transparent 0%, #d6d3d1 50%, transparent 100%);
+  margin-bottom: 20px; 
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 300%; 
+  height: 100%;
+  background: linear-gradient(to right, transparent 0%, #e7e5e4 50%, transparent 100%);
+  animation: shimmerAnimation 1.5s infinite linear; 
+}
+
+@keyframes shimmerAnimation {
+  100% {
+    left: 150%;
+  }
 }

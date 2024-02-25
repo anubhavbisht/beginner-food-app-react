@@ -3,8 +3,7 @@ import { imgUrl } from "../utils/constants";
 const RestaurantCard = (props) => {
   console.log("Restaurant card rendered....");
   const { resCardDetails } = props;
-  const { data } = resCardDetails;
-  const { cloudinaryImageId, name, cuisines, avgRating, deliveryTime } = data;
+  const { cloudinaryImageId, name, cuisines, avgRating, deliveryTime } = resCardDetails;
   return (
     <div className="res-card">
       <img className="res-logo" src={`${imgUrl}${cloudinaryImageId}`} />

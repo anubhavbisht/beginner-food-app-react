@@ -118,3 +118,16 @@
   width: 150px;
   margin-right: 3px;
 }
+
+.error-container {
+  background-color: #ffcccc;
+  border: 1px solid #ff0000;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.error-message {
+  color: #ff0000;
+  font-weight: bold;
+}

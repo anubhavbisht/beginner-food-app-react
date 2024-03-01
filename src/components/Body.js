@@ -22,7 +22,7 @@ const Body = () => {
   };
 
   useEffect(() => {
-    console.log("useEffect in body component called");
+    console.log("useEffect called in body");
     fetchData();
   }, []);
 

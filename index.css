@@ -131,3 +131,17 @@
   color: #ff0000;
   font-weight: bold;
 }
+
+.custom-link {
+  text-decoration: none;
+  color: #0f172a;
+}
+
+.custom-link:hover {
+  color: #64748b; /* Change link text color on hover */
+}
+
+.userCard {
+  padding: 10px;
+  border: 1px solid black;
+}

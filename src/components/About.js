@@ -31,9 +31,15 @@ class About extends React.Component {
     super(props);
     console.log("Inside constructor of About");
   }
+
   componentDidMount() {
     console.log("About component has been mounted");
   }
+
+  componentWillUnmount() {
+    console.log("About component has been unmounted");
+  }
+
   render() {
     console.log("Inside render function of class component of About page");
     return (
@@ -41,9 +47,9 @@ class About extends React.Component {
         <h1>About</h1>
         <h2>This is a react project</h2>
         <UserClass
-          name="Anu Bisht"
-          location="Panchkula"
-          contact="@anubhav_bisht"
+          nameOfUser="Anu Bisht"
+          locationOfUser="Panchkula"
+          contactOfUser="@anubhav_bisht"
           componentType="class"
         />
       </div>

@@ -12,13 +12,17 @@ const Body = () => {
 
   const fetchData = async () => {
     const data = await fetch(restaurantsUrl);
-    const json = await data.json();
-    setRestaurants(
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
-    setFilteredRestaurants(
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
+    if (data) {
+      const json = await data.json();
+      setRestaurants(
+        json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants
+      );
+      setFilteredRestaurants(
+        json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants
+      );
+    }
   };
 
   useEffect(() => {

@@ -145,3 +145,8 @@
   padding: 10px;
   border: 1px solid black;
 }
+
+.userCard img{
+  width: 150px;
+  height: 150px;
+}

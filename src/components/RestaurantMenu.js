@@ -10,9 +10,10 @@ const RestaurantMenu = () => {
   const restaurantId = params.resId;
   const fetchMenu = async () => {
     const data = await fetch(restaurantMenuUrl + restaurantId);
-    console.log(restaurantMenuUrl + restaurantId, "link");
-    const json = await data.json();
-    setResInfo(json.data);
+    if (data) {
+      const json = await data.json();
+      setResInfo(json.data);
+    }
   };
 
   useEffect(() => {

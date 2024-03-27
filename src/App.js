@@ -8,11 +8,13 @@ import Contact from "./components/Contact";
 import Error from "./components/Error";
 import "../index.css";
 import RestaurantMenu from "./components/RestaurantMenu";
+import OfflineOnlinePopup from "./components/OfflineOnlinePopup";
 
 const AppLayout = () => {
   console.log("App rendered....");
   return (
     <div className="app">
+      <OfflineOnlinePopup />
       <Header />
       <Outlet />
     </div>

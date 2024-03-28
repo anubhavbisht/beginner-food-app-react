@@ -25,7 +25,11 @@ const Header = () => {
               About
             </Link>
           </li>
-          <li>Cart</li>
+          <li>
+            <Link className="custom-link" to="/cart">
+              Cart
+            </Link>
+          </li>
           <li>
             <Link className="custom-link" to="/contact">
               Contact Us

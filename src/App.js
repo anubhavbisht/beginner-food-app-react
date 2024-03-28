@@ -6,7 +6,7 @@ import Body from "./components/Body";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Error from "./components/Error";
-import "../index.css";
+import "../index-root.css";
 import RestaurantMenu from "./components/RestaurantMenu";
 import OfflineOnlinePopup from "./components/OfflineOnlinePopup";
 import LoadingPage from "./components/LoadingPage";

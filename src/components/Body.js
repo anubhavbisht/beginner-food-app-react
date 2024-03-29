@@ -33,19 +33,20 @@ const Body = () => {
   return listOfRestaurants.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="body">
-      <div className="header-actions">
-        <div className="search">
+    <div>
+      <div className="flex items-center">
+        <div>
           <input
             value={searchText}
-            className="search-textbox"
+            className="w-80 h-8 px-4 mr-2 rounded-md border border-gray-500 focus:outline-none focus:border-blue-500"
             type="text"
+            placeholder="Search you favourite restaurant"
             onChange={(e) => {
               setSearchText(e.target.value);
             }}
           />
           <button
-            className="search-btn"
+            className="search-btn px-4 py-2 font-medium text-white bg-blue-500 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
             onClick={() => {
               const filteredRestaurant = listOfRestaurants.filter((res) =>
                 res.info.name.toLowerCase().includes(searchText.toLowerCase())
@@ -57,9 +58,9 @@ const Body = () => {
             Search for restaurant
           </button>
         </div>
-        <div className="filter">
+        <div>
           <button
-            className="filter-btn"
+            className="px-4 py-2 font-medium text-white bg-blue-500 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
             onClick={() => {
               const filteredRestaurants = listOfRestaurants.filter(
                 (res) => res?.info?.avgRating >= 4.5
@@ -71,14 +72,10 @@ const Body = () => {
           </button>
         </div>
       </div>
-      <div className="res-container">
+      <div className="flex flex-wrap">
         {filteredRestaurants.map((res) => {
           return (
-            <Link
-              className="custom-link"
-              to={`/restaurants/${res.info.id}`}
-              key={res.info.id}
-            >
+            <Link to={`/restaurants/${res.info.id}`} key={res.info.id}>
               <RestaurantCard resCardDetails={res.info} />
             </Link>
           );

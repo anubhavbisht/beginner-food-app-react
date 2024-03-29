@@ -9,34 +9,34 @@ const Header = () => {
     console.log("useEffect called in header");
   }, []);
   return (
-    <div className="header">
-      <div className="logo-container">
-        <img className="logo" src={logo} />
+    <div className="flex justify-between border border-black">
+      <div>
+        <img className="w-20 h-20" src={logo} />
       </div>
-      <div className="navbar">
-        <ul>
-          <li>
-            <Link className="custom-link" to="/">
+      <div className="flex list-none text-lg items-center">
+        <ul className="flex list-none">
+          <li className="px-4 py-4">
+            <Link className="hover:text-gray-500" to="/">
               Home
             </Link>
           </li>
-          <li>
-            <Link className="custom-link" to="/about">
+          <li className="px-4 py-4">
+            <Link className="hover:text-gray-500" to="/about">
               About
             </Link>
           </li>
-          <li>
-            <Link className="custom-link" to="/cart">
+          <li className="px-4 py-4">
+            <Link className="hover:text-gray-500" to="/cart">
               Cart
             </Link>
           </li>
-          <li>
-            <Link className="custom-link" to="/contact">
+          <li className="px-4 py-4">
+            <Link className="hover:text-gray-500" to="/contact">
               Contact Us
             </Link>
           </li>
           <button
-            className="login"
+            className="bg-white text-gray-700 border border-gray-700 rounded-md px-2 py-1 mr-4 cursor-pointer hover:bg-gray-700 hover:text-white"
             onClick={() => {
               btnNameReact === "Login"
                 ? setBtnNameReact("Logout")
